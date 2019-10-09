@@ -1,1 +1,2 @@
-# visual-diary
+# Visual Diary
+Just a personal theme.
