@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" wp-template wp-template-export-as="singular.php" wp-template-preview-url="http://localhost:8888/visual/2019/06/post-31/">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>New page</title>
+        <link href="style.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div id="page" class="site">
+            <header class="site-header" data-pgc="main.header">
+                <div class="page-title">
+                    <a href="" cms-site-link="home"><h1 cms-site-name>Heading 1</h1></a>
+                </div>
+                <ul cms-menu="primary" class="menu-list">
+                    <li class="menu-item">
+                        <a href="">Link</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="">Link</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="">Link</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="">Link</a>
+                    </li>
+                </ul>
+            </header>
+            <div id="content" class="site-content" wp-site-content>
+                <section class="content-area">
+                    <main id="main" class="site-main">
+                        <article cms-post="loop">
+                            <header class="image-large-item" wp-acf-get-field="a" wp-acf-get-field-set="style" wp-acf-get-field-set-style="background-image: linear-gradient(to <?php echo get_field( 'direction_color' ) . ', ' . get_field( 'background_color' ) . ', ' . get_field( 'background_color_right' ) . ');'; ?>">
+                                <div class="image-wrapper">
+                                    <a href="" cms-post-link><img src="http://pinegrow.com/placeholders/img13.jpg" cms-post-image="large"/></a>
+                                </div>
+                            </header>
+                            <main class="description-wrapper">
+                                <div class="post-title">
+                                    <h2 cms-post-title>Heading 2</h2>
+                                </div>
+                                <div class="post-content" cms-post-content></div>
+                                <div class="meta-info" wp-call-function="$field_camera_check = get_field( 'camera_brand' ); if($field_camera_check){  echo '<div class=&quot;single-meta&quot;>'; $values_camera = get_field( 'camera_brand' ); if($values_camera) {   $field_camera = get_field_object( 'camera_brand' );   echo '<p class=&quot;meta-text&quot;><span class=&quot;meta-label&quot;>' . $field_camera['label'] . '</span>: ';   foreach($values_camera as $value_camera)   { $tag_camera = get_tag($value_camera);     $tagname_camera = $tag_camera->name;     $taglist_camera = $prefix_camera . '' . $tagname_camera . '';     $prefix_camera = ''; $tagurl_camera = get_tag_link($value_camera);   echo '<span class=&quot;meta-value&quot;><a href=&quot;' . $tagurl_camera . '&quot;>' . $taglist_camera . '</a></span>'; }   echo '</p>'; } $values_lens = get_field( 'lens_used' ); if($values_lens) { $field_lens = get_field_object( 'lens_used' ); echo '<p class=&quot;meta-text&quot;><span class=&quot;meta-label&quot;>' . $field_lens['label'] . '</span>: '; foreach($values_lens as $value_lens){ $tag_lens = get_tag($value_lens); $tagname_lens = $tag_lens->name; $taglist_lens = $prefix_lens . '' . $tagname_lens . ''; $prefix_lens = ''; $tagurl_lens = get_tag_link($value_lens); echo '<span class=&quot;meta-value&quot;><a href=&quot;' . $tagurl_lens . '&quot;>' . $taglist_lens . '</a></span>'; } echo '</p>'; }    $values_film = get_field( 'film_used' ); if($values_film) {   $field_film = get_field_object( 'film_used' );   echo '<p class=&quot;meta-text&quot;><span class=&quot;meta-label&quot;>' . $field_film['label'] . '</span>: ';   foreach($values_film as $value_film)   { $tag_film = get_tag($value_film);     $tagname_film = $tag_film->name;     $taglist_film = $prefix_film . '' . $tagname_film . '';     $prefix_film = ''; $tagurl_film = get_tag_link($value_film);   echo '<span class=&quot;meta-value&quot;><a href=&quot;' . $tagurl_film . '&quot;>' . $taglist_film . '</a></span>'; }   echo '</p>'; }    echo '</div>'; }" wp-call-function-set="content"></div>
+                                <div class="single-date" cms-post-date wp-if-is-page="!"></div>
+                            </main>
+                            <footer role="navigation" class="pagination pagination-index">
+                                <nav wp-post-navigation wp-pagination-prev-text="prev" wp-pagination-next-text="next" wp-post-navigation-set="content">
+                                    <a class="previous" href="" wp-pagination-field wp-pagination-field-item="prev_link" wp-pagination-field-query="archive_query"><i class="fas fa-long-arrow-alt-left"></i></a>
+                                    <div>
+                                        <span wp-pagination-field wp-pagination-field-item="page" wp-pagination-field-query="archive_query">current</span>
+                                        <span> / </span>
+                                        <span wp-pagination-field wp-pagination-field-item="total" wp-pagination-field-query="archive_query">total</span>
+                                    </div>
+                                    <a class="next" href="" wp-pagination-field wp-pagination-field-item="next_link" wp-pagination-field-query="archive_query"><i class="fas fa-long-arrow-alt-right"></i></a>
+                                </nav>
+                            </footer>
+                        </article>
+                    </main>
+                </section>
+            </div>
+            <footer class="site-footer" data-pgc="main.footer"></footer>
+        </div>
+    </body>
+</html>

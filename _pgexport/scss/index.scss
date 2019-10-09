@@ -1,0 +1,136 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    line-height: $line-height-std;
+    font-family: $font-family;
+    background-color: $color-background;
+}
+
+a {
+    color: $color-accent;
+    text-decoration: none;
+}
+
+a:hover {
+    color: $color-hover;
+    text-decoration: none;
+}
+
+h1 {
+    font-size: $size-h1;
+    margin-bottom: $margin-me;
+}
+
+h2 {
+    font-size: $size-h2;
+    margin-bottom: $margin-me;
+}
+
+p {
+    margin-bottom: $margin-me;
+}
+
+.site-header {
+    position: fixed;
+    z-index: 999;
+    bottom: $margin-lg;
+    right: $margin-lg;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.menu-list {
+    display: flex;
+    justify-content: flex-start
+}
+
+.page-title h1 {
+    margin-bottom: $margin-sm;
+}
+
+.menu-item {
+    margin-left: $margin-sm;
+    font-size: $size-p;
+}
+
+.tag-archive {
+    position: fixed;
+    z-index: 998;
+    top: $margin-lg;
+    left: $margin-lg;
+}
+
+.quote-source {
+    margin-top: $margin-sm;
+    font-size: $size-p-sm;
+    font-style: italic;
+}
+
+.quote-wrapper {
+    max-width: 600px;
+    padding: $margin-me;
+    font-size: $size-p;
+    line-height: 1.6;
+}
+
+.pagination-quotes {
+    margin: $margin-me;
+    flex-direction: row;
+    display: flex;
+    font-size: $size-p;
+}
+
+.previous {
+    margin-right: $margin-sm;
+}
+
+.next {
+    margin-left: $margin-sm;
+}
+
+.pagination-index {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: $margin-me;
+    font-size: $size-p;
+}
+
+.description-wrapper {
+    font-size: $size-p;
+    max-width: 600px;
+    line-height: $line-height-std;
+    padding: $margin-lg;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.post-content {
+    margin-bottom: $margin-sm;
+    text-align: center;
+}
+
+.meta-info {
+    text-align: center;
+    margin-bottom: $margin-me;
+}
+
+.single-date {
+    text-align: center;
+}
+
+.post-title {
+    text-align: center;
+}
+
+.meta-text {
+    margin: 0;
+}
+
+.site {
+    padding-bottom: 120px;
+}
