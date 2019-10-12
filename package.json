@@ -1,0 +1,33 @@
+{
+  "name": "visual_diary",
+  "version": "1.0.0",
+  "description": "custom theme",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcellocurto/visual-diary.git"
+  },
+  "author": "Marcello Curto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marcellocurto/visual-diary/issues"
+  },
+  "homepage": "https://github.com/marcellocurto/visual-diary#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-if": "^3.0.0",
+    "gulp-options": "^1.1.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-rsync": "0.0.8",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-strip-debug": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
+    "node-sass": "^4.12.0"
+  }
+}
