@@ -7,19 +7,19 @@ Supports infinite scroll and is ready for MacOS dark mode.
 
 This is the main view to scroll through large sized images without much distraction.
 
-![](/img/index-light)
+![](/img/index-light.jpg)
 
 And this is how it looks in dark mode.
 
-![](/img/index-dark)
+![](/img/index-dark.jpg)
 
 The theme also works for text based posts.
 
-![](/img/quotes-light)
+![](/img/quotes-light.jpg)
 
 And looks great in dark, too.
 
-![](/img/quotes-dark)
+![](/img/quotes-dark.jpg)
 
 Each image/post has it's indiviual page where each can have individually colored backgrounds.
 
@@ -33,8 +33,8 @@ Or have a color gradient.
 
 There is also a grid archive view to quickly browse a large collection of images.
 
-![](/img/grid)
+![](/img/grid.jpg)
 
 The theme switches to dark mode automatically when the user's device does.
 
-![](/img/light-to-dark)
+![](/img/light-to-dark.gif)
