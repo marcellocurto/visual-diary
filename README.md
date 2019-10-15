@@ -21,7 +21,7 @@ And looks great in dark, too.
 
 ![](/img/quotes-dark.jpg)
 
-Each image/post has it's indiviual page where each can have individually colored backgrounds.
+Each image has it's own page where each can have individually colored backgrounds.
 
 They can be solid in color.
 
