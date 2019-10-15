@@ -25,11 +25,11 @@ Each image has it's own page where each can have individually colored background
 
 They can be solid in color.
 
-![](/img/color)
+![](/img/color.jpg)
 
 Or have a color gradient.
 
-![](/img/gradient)
+![](/img/gradient.jpg)
 
 There is also a grid archive view to quickly browse a large collection of images.
 
