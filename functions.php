@@ -172,22 +172,16 @@ if (!function_exists('marcello_visual_enqueue_scripts')):
 {
 
         wp_register_script('visual_script', get_template_directory_uri() . '/assets/visual.js', array('jquery'), null, true);
-        wp_enqueue_script('visual_script');
+        wp_enqueue_script('visual_script'); 
 
         wp_register_script('gtag', 'https://www.googletagmanager.com/gtag/js?id=UA-19008069-8', null, null, true);
         wp_enqueue_script('gtag');
-
-        /* Pinegrow generated Enqueue Scripts End */
-
-        /* Pinegrow generated Enqueue Styles Begin */
 
         wp_register_style('adobefonts', 'https://use.typekit.net/enx2ywk.css', null, null, 'all');
         wp_enqueue_style('adobefonts');
 
         wp_deregister_style('style');
         wp_enqueue_style('style', get_template_directory_uri() . '/style.css', false, null, 'all');
-
-        /* Pinegrow generated Enqueue Styles End */
 
     }
     add_action('wp_enqueue_scripts', 'marcello_visual_enqueue_scripts');

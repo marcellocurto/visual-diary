@@ -1,9 +1,3 @@
-window.dataLayer = window.dataLayer || [];
-function gtag() { dataLayer.push(arguments); }
-gtag('js', new Date());
-
-gtag('config', 'UA-19008069-8'); 
-
 /*!
  * Infinite Ajax Scroll v2.3.1
  * A jQuery plugin for infinite scrolling
@@ -30,3 +24,9 @@ ias.extension(new IASPagingExtension());
 ias.extension(new IASHistoryExtension({
   prev: '.previous',
 }));
+
+window.dataLayer = window.dataLayer || [];
+function gtag() { dataLayer.push(arguments); }
+gtag('js', new Date());
+
+gtag('config', 'UA-19008069-8'); 

@@ -15,6 +15,9 @@ Text Domain: marcello_visual
 @import "_archive.scss";
 @import "_front-page.scss";
 @import "_quotes.scss";
+
+$fa-font-path: 'icons';
+
 @import "font-aweseome/fontawesome.scss";
 @import "font-aweseome/solid.scss";
 @import "font-aweseome/brands.scss";
