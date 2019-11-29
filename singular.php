@@ -7,7 +7,24 @@
             <?php PG_Helper::rememberShownPost(); ?>
             <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
             <?php if (has_post_thumbnail()): ?>
-                <header class="image-large-item" style="background-image: linear-gradient(to <?php echo get_field('direction_color') . ', ' . get_field('background_color') . ', ' . get_field('background_color_right') . ');'; ?>">
+            
+        <?php
+
+            $background_direction = get_field('direction_color');
+            $background_left = get_field('background_color');
+            $background_right = get_field('background_color_right');
+
+            if (empty($background_left)) {
+                $background_left .= '#ffffff00';
+            }
+    
+            if (empty($background_right)) {
+                $background_right .= '#ffffff00';
+            }
+     
+        ?>
+
+                <header class="image-large-item" style="background-image: linear-gradient(to <?php echo $background_direction . ', ' . $background_left . ', ' . $background_right . ');'; ?>">
 
                 <div class="image-wrapper">
                     <a href="<?php echo esc_url(get_permalink()); ?>">
@@ -78,12 +95,14 @@
                 }
                     ?>
                     </div>
-                    <?php if (!is_page()): ?>
-                        <div class="single-date">
-                            <?php the_time(get_option('date_format')); ?>
-                        </div>
-                    <?php endif; ?>
             </main>
+            <footer>
+                <?php if (!is_page()): ?>
+                    <div class="single-date">
+                        <?php the_time(get_option('date_format')); ?>
+                    </div>
+                <?php endif; ?>
+            </footer>
         </article>
         <?php endwhile; ?>
         <?php else: ?>
