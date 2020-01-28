@@ -25,12 +25,9 @@
         ?>
 
                 <header class="image-large-item" style="background-image: linear-gradient(to <?php echo $background_direction . ', ' . $background_left . ', ' . $background_right . ');'; ?>">
-
-                <div class="image-wrapper">
-                    <a href="<?php echo esc_url(get_permalink()); ?>">
-                    <?php echo PG_Image::getPostImage(null, 'large', null, 'both', null) ?>
-                    </a>
-                </div>
+                    <picture class="image-wrapper">
+                        <?php echo get_the_post_thumbnail( null, 'full' ); ?>
+                    </picture>
                 </header>
             <?php endif; ?>
                 <main class="description-wrapper">
