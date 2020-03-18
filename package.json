@@ -31,6 +31,7 @@
   },
   "dependencies": {
     "acorn": "^7.1.1",
+    "caniuse-lite": "^1.0.30001035",
     "lodash": "^4.17.15",
     "lodash.template": "^4.5.0",
     "minimist": "^1.2.5"
