@@ -11,9 +11,18 @@
     width: calc(20vw - 22px);
     height: calc(20vw - 22px);
 
+    &:hover {
+        background-color: blue;
+    }
+
     img{
         width: 100%;
         height: 100%;
         object-fit: cover;
+        object-position: top;
+
+        &:hover {
+            opacity: 0.68;
+        }
     }
 }
