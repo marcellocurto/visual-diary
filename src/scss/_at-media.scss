@@ -74,4 +74,10 @@
   a:hover {
     color: $color-hover-dark;
   }
+
+  .grid-item {
+    &:hover {
+      background-color: red;
+    }
+  }
 }

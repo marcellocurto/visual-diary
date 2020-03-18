@@ -4638,6 +4638,8 @@ readers do not read off random characters that represent icons */
   a {
     color: red; }
   a:hover {
-    color: blue; } }
+    color: blue; }
+  .grid-item:hover {
+    background-color: red; } }
 
 /*# sourceMappingURL=style.css.map */
