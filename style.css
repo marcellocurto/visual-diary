@@ -4640,6 +4640,8 @@ readers do not read off random characters that represent icons */
   a:hover {
     color: blue; }
   .grid-item:hover {
-    background-color: red; } }
+    background-color: red; }
+  .grid-item img:hover {
+    opacity: 0.44; } }
 
 /*# sourceMappingURL=style.css.map */
