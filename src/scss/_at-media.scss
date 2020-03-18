@@ -16,6 +16,11 @@
     margin: 0 8px;
   }
 
+  .grid-item {
+    width: calc(50vw - 27px);
+    height: calc(50vw - 27px);
+  }
+
   .site-header {
     text-align: center;
     align-items: center;

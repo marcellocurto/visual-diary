@@ -9,7 +9,7 @@
 	<?php PG_Helper::rememberShownPost(); ?>
 	<article <?php post_class('grid-item'); ?> id="post-<?php the_ID(); ?>">
 	<a href="<?php echo esc_url(get_permalink()); ?>">
-	<?php the_post_thumbnail( 'medium-large' ) ?>
+	<?php the_post_thumbnail( 'thumbnail' ) ?>
 	</a>
 	</article>
 
