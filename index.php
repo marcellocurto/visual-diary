@@ -8,11 +8,9 @@
 
 	<?php PG_Helper::rememberShownPost(); ?>
 	<article <?php post_class('grid-item'); ?> id="post-<?php the_ID(); ?>">
-	<a href="<?php echo esc_url(get_permalink()); ?>"><?php $image_attributes = !empty(get_the_ID()) ? wp_get_attachment_image_src(PG_Image::isPostImage() ? get_the_ID() : get_post_thumbnail_id(get_the_ID()), 'large') : null; ?><div class="image-container" style="<?php if ($image_attributes) {
-        echo 'background-image:url(\'' . $image_attributes[0] . '\')';
-    }
-    ?>">
-	</div></a>
+	<a href="<?php echo esc_url(get_permalink()); ?>">
+	<?php the_post_thumbnail( 'medium-large' ) ?>
+	</a>
 	</article>
 
 <?php endwhile; ?>

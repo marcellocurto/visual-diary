@@ -5,7 +5,7 @@
         <?php
             $quote_query_args = array(
                 'post_type' => 'quote',
-                'posts_per_page' => 20,
+                'posts_per_page' => 10,
                 'paged' => (get_query_var('paged')) ? get_query_var('paged') : 1,
                 'order' => 'DESC',
                 'orderby' => 'date'

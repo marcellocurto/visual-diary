@@ -1,13 +1,4 @@
 @media (max-width: 767px) {
-  .image-container {
-    width: 230px;
-    height: 230px;
-  }
-
-  .grid-item {
-    margin: 6px;
-  }
-
   .site {
     padding-bottom: 130px;
   }
@@ -59,11 +50,6 @@
 }
 
 @media (max-width: 519px) {
-  .image-container {
-    width: 100px;
-    height: 100px;
-  }
-
   .image-wrapper {
     margin: $margin-me;
   }
