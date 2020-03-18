@@ -24,9 +24,9 @@ let dist = './assets/',
   scriptPath = './src/js/',
   scriptSRC = [
     scriptPath + 'script.js',
-    scriptPath + 'ias.min.js',
-    scriptPath + 'js-init.js',
     scriptPath + 'google_analytics.js',
+    scriptPath + 'infinite-ajax-scroll.min.js',
+    scriptPath + 'js-init.js'
   ],
   styleWatch = './src/scss/**/*.scss',
   scriptWatch = './src/js/**/*.js',

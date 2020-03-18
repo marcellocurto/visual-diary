@@ -5,7 +5,7 @@
         <?php
             $archive_query_args = array(
                 'post_type' => 'post',
-                'posts_per_page' => 4,
+                'posts_per_page' => 10,
                 'paged' => get_query_var('page') ? get_query_var('page') : 1,
                 'order' => 'DESC',
                 'orderby' => 'date'

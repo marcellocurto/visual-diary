@@ -1,14 +1,9 @@
-let ias = new InfiniteAjaxScroll('main', {
+var ias = jQuery.ias({
+  container: 'main',
   item: 'article',
-  next: '.next',
   pagination: '.pagination',
-  negativeMargin: 1000,
-  logger: false
+  next: '.next',
+  negativeMargin: 1900,
 });
 
-ias.on('page', (event) => {
-  let state = history.state;
-  history.replaceState(state, event.title, event.url);
-  console.log(state, event.title, event.url);
-  
-});
+ias.extension(new IASPagingExtension())
