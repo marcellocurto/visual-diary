@@ -1,30 +1,33 @@
-<?php get_header(); ?>
+<?php
+get_header();
+if (have_posts()):
+while (have_posts()): 
+the_post();
+PG_Helper::rememberShownPost();
 
-<section class="content-area">
-    <main id="main" class="site-main">
-        <?php if (have_posts()): ?>
-        <?php while (have_posts()): the_post(); ?>
-            <?php PG_Helper::rememberShownPost(); ?>
+$background_direction = get_field('direction_color');
+$background_left = get_field('background_color');
+$background_right = get_field('background_color_right');
+if (empty($background_left)) { $background_left .= '#ffffff00'; }
+if (empty($background_right)) { $background_right .= '#ffffff00'; }
+?>
+<style>
+    html,
+    body {
+        <?php 
+        $background_body_direction = $background_direction;
+        if ($background_direction == 'top') { $background_body_direction = 'bottom'; } 
+        elseif ($background_direction == 'bottom') { $background_body_direction = 'top'; }       
+        echo 'background-image: linear-gradient(to ' . $background_body_direction . ', ' . $background_left . ', ' . $background_right . ');'; 
+        ?>
+    }
+</style>
+
+<section class="content-area"  style="background-image: linear-gradient(to <?php echo $background_direction . ', ' . $background_left . ', ' . $background_right . ');'; ?>">
+<main id="main" class="site-main">
             <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
             <?php if (has_post_thumbnail()): ?>
-            
-        <?php
-
-            $background_direction = get_field('direction_color');
-            $background_left = get_field('background_color');
-            $background_right = get_field('background_color_right');
-
-            if (empty($background_left)) {
-                $background_left .= '#ffffff00';
-            }
-    
-            if (empty($background_right)) {
-                $background_right .= '#ffffff00';
-            }
-     
-        ?>
-
-                <header class="image-large-item" style="background-image: linear-gradient(to <?php echo $background_direction . ', ' . $background_left . ', ' . $background_right . ');'; ?>">
+                <header class="image-large-item">
                     <picture class="image-wrapper">
                         <?php echo get_the_post_thumbnail( null, 'full' ); ?>
                     </picture>
@@ -101,11 +104,12 @@
                 <?php endif; ?>
             </footer>
         </article>
+        </main>
+</section>
         <?php endwhile; ?>
         <?php else: ?>
-        <p><?php _e('Sorry, no posts matched your criteria.', 'marcello_visual'); ?></p>
+        <p>Sorry, it's seems like the page you are looking for doesn't exist.</p>
         <?php endif; ?>
-    </main>
-</section>
+
 
 <?php get_footer(); ?>

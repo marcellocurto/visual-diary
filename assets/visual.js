@@ -31,7 +31,7 @@ var ias = jQuery.ias({
   item: 'article',
   pagination: '.pagination',
   next: '.next',
-  negativeMargin: 1900,
+  negativeMargin: 4000,
 });
 
 ias.extension(new IASPagingExtension())

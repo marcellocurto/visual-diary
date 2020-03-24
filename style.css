@@ -203,7 +203,7 @@ p {
 .meta-text {
   margin: 0; }
 
-.site {
+.content-area {
   padding-bottom: 120px; }
 
 .grid-wrapper {
@@ -4591,7 +4591,7 @@ readers do not read off random characters that represent icons */
   font-weight: 400; }
 
 @media (max-width: 767px) {
-  .site {
+  .content-area {
     padding-bottom: 130px; }
   h1 {
     font-size: 26px; }

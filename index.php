@@ -15,7 +15,7 @@
 
 <?php endwhile; ?>
 <?php else: ?>
-<p><?php _e('Sorry, no posts matched your criteria.', 'marcello_visual'); ?></p>
+<p><?php _e('Sorry, cannot find what you are looking for.', 'marcello_visual'); ?></p>
 <?php endif; ?>
 </main>
 <?php if (PG_Pagination::isPaginated()): ?>
