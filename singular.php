@@ -18,7 +18,7 @@ if (empty($background_right)) { $background_right .= '#ffffff00'; }
         $background_body_direction = $background_direction;
         if ($background_direction == 'top') { $background_body_direction = 'bottom'; } 
         elseif ($background_direction == 'bottom') { $background_body_direction = 'top'; }       
-        echo 'background-image: linear-gradient(to ' . $background_body_direction . ', ' . $background_left . ', ' . $background_right . ');'; 
+        echo 'background-color:' . $background_left . ';background-image: linear-gradient(to ' . $background_body_direction . ', ' . $background_left . ', ' . $background_right . ');'; 
         ?>
     }
 </style>
