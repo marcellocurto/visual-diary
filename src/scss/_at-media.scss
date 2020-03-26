@@ -1,4 +1,4 @@
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .content-area {
     padding-bottom: 130px;
   }
@@ -16,9 +16,8 @@
     margin: 0 8px;
   }
 
-  .grid-item {
-    width: calc(50vw - 27px);
-    height: calc(50vw - 27px);
+  .grid-wrapper {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 
   .site-header {
@@ -55,6 +54,10 @@
 }
 
 @media (max-width: 519px) {
+  .grid-wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+
   .image-wrapper {
     margin: $margin-me;
   }
