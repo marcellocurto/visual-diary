@@ -11,19 +11,8 @@ $background_right = get_field('background_color_right');
 if (empty($background_left)) { $background_left .= '#ffffff00'; }
 if (empty($background_right)) { $background_right .= '#ffffff00'; }
 ?>
-<style>
-    html,
-    body {
-        <?php 
-        $background_body_direction = $background_direction;
-        if ($background_direction == 'top') { $background_body_direction = 'bottom'; } 
-        elseif ($background_direction == 'bottom') { $background_body_direction = 'top'; }       
-        echo 'background-color:' . $background_left . ';background-image: linear-gradient(to ' . $background_body_direction . ', ' . $background_left . ', ' . $background_right . ');'; 
-        ?>
-    }
-</style>
 
-<section class="content-area"  style="background-image: linear-gradient(to <?php echo $background_direction . ', ' . $background_left . ', ' . $background_right . ');'; ?>">
+<section class="content-area">
 <main id="main" class="site-main">
             <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
             <?php if (has_post_thumbnail()): ?>
@@ -106,10 +95,26 @@ if (empty($background_right)) { $background_right .= '#ffffff00'; }
         </article>
         </main>
 </section>
-        <?php endwhile; ?>
-        <?php else: ?>
-        <p>Sorry, it's seems like the page you are looking for doesn't exist.</p>
-        <?php endif; ?>
+<?php endwhile; ?>
+<?php else: ?>
+<p>Sorry, it's seems like the page you are looking for doesn't exist.</p>
+<?php endif; ?>
 
+<?php
+$background_body_direction = $background_direction;
+if ($background_direction == 'top') { $background_body_direction = 'bottom'; } 
+elseif ($background_direction == 'bottom') { $background_body_direction = 'top'; } 
 
-<?php get_footer(); ?>
+$custom_css = 'html { background-color:' . $background_left . '; background-image: linear-gradient(to ' . $background_body_direction . ', ' . $background_left . ', ' . $background_right . ')} body { background-color:' . $background_left . '; background-image: linear-gradient(to ' . $background_direction . ', ' . $background_left . ', ' . $background_right . ');} ';
+if ( !empty($custom_css) ) {
+    add_action( 'custom_style_action', 'roark_enqueue_post_css', 10, 1 );
+    function roark_enqueue_post_css( $css ) {
+        wp_register_style( 'roark-custom-post-style', false );
+        wp_enqueue_style( 'roark-custom-post-style' );
+        wp_add_inline_style( 'roark-custom-post-style', $css );
+    }
+    do_action( 'custom_style_action', $custom_css );
+}
+
+get_footer();
+?>
