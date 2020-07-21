@@ -20,14 +20,7 @@ let dist = './assets/',
   production = '/Users/marcello/Local\ Sites/marcello/app/public/wp-content/themes/visual/',
   phpSRC = './**/*.php',
   styleSRC = './src/scss/style.scss',
-  // styleSRCEditor = './src/scss/editor-style.scss',
-  scriptPath = './src/js/',
-  scriptSRC = [
-    scriptPath + 'script.js',
-    scriptPath + 'google_analytics.js',
-    scriptPath + 'infinite-ajax-scroll.min.js',
-    scriptPath + 'js-init.js'
-  ],
+
   styleWatch = './src/scss/**/*.scss',
   scriptWatch = './src/js/**/*.js',
   phpWatch = './**/*.php';
@@ -65,7 +58,7 @@ function css(cb) {
 // };
 
 function javascript(cb) {
-  gulp.src(scriptSRC)
+  gulp.src(scriptWatch)
     .pipe(concat('visual.js'))
     .pipe(gulpif(options.has('production'), stripDebug()))
     .pipe(gulp.dest(dist))

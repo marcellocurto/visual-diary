@@ -1,18 +1,3 @@
-//^^^^^^^        /^^^^           /^       /^^^^^^^    /^^   /^^  
-//^^    /^^    /^^    /^^       /^ ^^     /^^    /^^  /^^  /^^   
-//^^    /^^  /^^        /^^    /^  /^^    /^^    /^^  /^^ /^^    
-//^ /^^      /^^        /^^   /^^   /^^   /^ /^^      /^ /^      
-//^^  /^^    /^^        /^^  /^^^^^^ /^^  /^^  /^^    /^^  /^^   
-//^^    /^^    /^^     /^^  /^^       /^^ /^^    /^^  /^^   /^^  
-//^^      /^^    /^^^^     /^^         /^^/^^      /^^/^^     /^^
-
-// A website by Marcello Curto roark.at
-window.dataLayer = window.dataLayer || [];
-function gtag() { dataLayer.push(arguments); }
-gtag('js', new Date());
-
-gtag('config', 'UA-19008069-8'); 
-
 /*!
  * Infinite Ajax Scroll v2.3.1
  * A jQuery plugin for infinite scrolling
@@ -35,3 +20,13 @@ var ias = jQuery.ias({
 });
 
 ias.extension(new IASPagingExtension())
+
+//^^^^^^^        /^^^^           /^       /^^^^^^^    /^^   /^^  
+//^^    /^^    /^^    /^^       /^ ^^     /^^    /^^  /^^  /^^   
+//^^    /^^  /^^        /^^    /^  /^^    /^^    /^^  /^^ /^^    
+//^ /^^      /^^        /^^   /^^   /^^   /^ /^^      /^ /^      
+//^^  /^^    /^^        /^^  /^^^^^^ /^^  /^^  /^^    /^^  /^^   
+//^^    /^^    /^^     /^^  /^^       /^^ /^^    /^^  /^^   /^^  
+//^^      /^^    /^^^^     /^^         /^^/^^      /^^/^^     /^^
+
+// A website by Marcello Curto roark.at
